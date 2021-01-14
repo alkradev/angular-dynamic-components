@@ -63,6 +63,7 @@ export class AdBannerComponent implements OnInit, OnDestroy {
     viewContainerRef.clear();
 
     console.log("Ad subset length: " + subsetAds.length);
+    this.componentRefs = [];
     subsetAds.forEach(ad => {
       console.log(ad);
       let componentFactory = this.componentFactoryResolver.resolveComponentFactory(
